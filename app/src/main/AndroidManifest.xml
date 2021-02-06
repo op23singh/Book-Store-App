@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.op23singh.bookstore2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="Bookstore"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bookstore2">
+        <activity android:name=".Wanttoread" />
+        <activity android:name=".Favourites" />
+        <activity android:name=".Currentlyreading" />
+        <activity android:name=".Alreadyread" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".main_Page" />
+        <activity android:name=".RegisterUser" />
+        <activity android:name=".AllBooksActivity"/>
+        <activity android:name=".activity_book" />
+        <activity android:name=".Userdata" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mainsplash"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

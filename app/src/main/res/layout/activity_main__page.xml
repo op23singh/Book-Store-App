@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main_page_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtlicence"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/berkshire_swash"
+                android:text="My library"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imglogo" />
+            <ImageView
+                android:id="@+id/imglogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:src="@mipmap/ic_logo"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/lstbtn"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="list of all books"
+                app:backgroundTint="#F76540"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/btncurrent"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Currentlly Reading"
+                app:backgroundTint="#F76540"
+                app:layout_constraintEnd_toEndOf="@+id/lstbtn"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="@+id/lstbtn"
+                app:layout_constraintTop_toBottomOf="@+id/lstbtn" />
+
+            <Button
+                android:id="@+id/btnadalreadyread"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="already read books"
+                app:backgroundTint="#F76540"
+                app:layout_constraintEnd_toEndOf="@+id/btncurrent"
+                app:layout_constraintStart_toStartOf="@+id/btncurrent"
+                app:layout_constraintTop_toBottomOf="@+id/btncurrent" />
+            <Button
+                android:id="@+id/btnwanttoread"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="see your wishlist"
+                app:backgroundTint="#F76540"
+                app:layout_constraintEnd_toEndOf="@+id/btnadalreadyread"
+                app:layout_constraintStart_toStartOf="@+id/btnadalreadyread"
+                app:layout_constraintTop_toBottomOf="@+id/btnadalreadyread" />
+            <Button
+                android:id="@+id/btnfavourite"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="see your favourites"
+                app:backgroundTint="#F76540"
+                app:layout_constraintEnd_toEndOf="@+id/btnwanttoread"
+                app:layout_constraintStart_toStartOf="@+id/btnwanttoread"
+                app:layout_constraintTop_toBottomOf="@+id/btnwanttoread" />
+
+            <Button
+                android:id="@+id/btnabout"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="feedback"
+                app:backgroundTint="#F76540"
+                app:layout_constraintEnd_toEndOf="@+id/btnfavourite"
+                app:layout_constraintStart_toStartOf="@+id/btnfavourite"
+                app:layout_constraintTop_toBottomOf="@+id/btnfavourite" />
+
+            <Button
+                android:id="@+id/btnlogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.968"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.018"
+                android:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/txtlicence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developed by op23singh"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
